@@ -1,10 +1,17 @@
 module Main where
 import WithAnyBar.Types
 import WithAnyBar.App
+import WithAnyBar.Blink (signal)
+import Control.Concurrent (threadDelay, forkIO)
+import Control.Monad.IO.Class (liftIO)
 
 main :: IO ()
-main = runApp (notify "1738" Black >> execute >>= go) >>= f
+main = (>>= f) . runApp $ do
+  sig <- liftIO signal
+  liftIO white
+  startBlink sig
+  execute >>= go sig
   where f (Left e) = print e
         f (Right _) = pure ()
-        go True = notify "1738" White
-        go False = notify "1738" Red
+        go sig True = stopBlink sig >> liftIO green
+        go sig False = stopBlink sig >> liftIO red
