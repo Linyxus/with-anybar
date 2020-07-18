@@ -4,7 +4,7 @@ version: 1.0.0
 license: BSD-3-Clause
 build-type: Simple
 
-executable with-anybar
+executable wab
     build-depends: base < 5
                  , mtl
                  , containers
