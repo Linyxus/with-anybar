@@ -1,5 +1,6 @@
 update:
 	cabal2nix . > with-anybar.nix
+	cabal2nix . > project.nix
 
 shell: update
 	nix-shell
