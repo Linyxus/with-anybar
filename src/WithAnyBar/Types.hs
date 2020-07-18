@@ -7,6 +7,7 @@ type App = ExceptT AppError IO
 data AppError = AnyBarNotFound
               | OpenFailed
               | LaunchFailed
+              | EmptyCommand
               deriving (Eq, Show)
 
 data BarColor = White
