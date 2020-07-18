@@ -1,0 +1,21 @@
+cabal-version: 2.4
+name: with-anybar
+version: 1.0.0
+license: BSD-3-Clause
+build-type: Simple
+
+executable with-anybar
+    build-depends: base < 5
+                 , mtl
+                 , containers
+                 , bytestring
+                 , text
+                 , process
+                 , directory
+    other-modules: Utils.Shell
+                 , Utils.AnyBar
+                 , WithAnyBar.Types
+                 , WithAnyBar.App
+    main-is: Main.hs
+    hs-source-dirs: src
+    default-language: Haskell2010
