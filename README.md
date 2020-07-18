@@ -1,21 +1,21 @@
-# with-anybar
+# with-anybar [![Build Status](https://travis-ci.com/Linyxus/with-anybar.svg?branch=master)](https://travis-ci.com/Linyxus/with-anybar)
  Simple command line task monitoring with AnyBar.
 
 ## Install
 
-To use with-anybar, you have to firstly install [AnyBar](https://github.com/tonsky/AnyBar). You can either download the dmg file available on the project website, or use Homebrew Cask:
+To use `with-anybar`, you have to firstly install [AnyBar](https://github.com/tonsky/AnyBar). You can either download the dmg file available on the project website, or use Homebrew Cask:
 ```shell
 brew cask install anybar
 ```
 
-with-anybar can also be installed via Homebrew with:
+`with-anybar` can also be installed via Homebrew with:
 ```shell
 brew install linyxus/tools/with-anybar
 ```
 
 Or you can download prebuilt binaries from the release page.
 
-with-anybar is only available on macOS.
+`with-anybar` is only available on macOS.
 
 ## Usage
 
