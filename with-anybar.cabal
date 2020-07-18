@@ -12,8 +12,10 @@ executable with-anybar
                  , text
                  , process
                  , directory
+                 , network
     other-modules: Utils.Shell
                  , Utils.AnyBar
+                 , Utils.Network
                  , WithAnyBar.Types
                  , WithAnyBar.App
     main-is: Main.hs

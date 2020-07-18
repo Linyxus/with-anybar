@@ -2,6 +2,7 @@ module WithAnyBar.App where
 import WithAnyBar.Types
 import Utils.AnyBar (maybeFindAnyBar)
 import Utils.Shell (openApp)
+import Utils.Network (sendMsgTo)
 import Control.Monad.IO.Class (liftIO)
 
 locateAnyBar :: App String
@@ -16,3 +17,6 @@ launchApp = (>>= f) . liftIO . openApp
 
 launchAnyBar :: App ()
 launchAnyBar = locateAnyBar >>= launchApp
+
+notify :: String -> BarColor -> App ()
+notify port color = liftIO $ sendMsgTo (showColor color) "127.0.0.1" port

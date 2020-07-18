@@ -1,6 +1,6 @@
 module Utils.Shell where
 
-import System.Process (readCreateProcess, shell, spawnProcess, waitForProcess)
+import System.Process (readCreateProcess, shell, spawnProcess, waitForProcess, system)
 import System.Exit (ExitCode(..))
 
 getCurrentUser :: IO String

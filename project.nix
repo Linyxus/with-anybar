@@ -1,16 +1,14 @@
-{ mkDerivation, array, base, bytestring, containers, lens
-, megaparsec, mtl, optparse-applicative, parser-combinators, stdenv
-, text
+{ mkDerivation, base, bytestring, containers, directory, mtl
+, network, process, stdenv, text
 }:
 mkDerivation {
-  pname = "model";
+  pname = "with-anybar";
   version = "1.0.0";
   src = ./.;
   isLibrary = false;
   isExecutable = true;
   executableHaskellDepends = [
-    array base bytestring containers lens megaparsec mtl
-    optparse-applicative parser-combinators text
+    base bytestring containers directory mtl network process text
   ];
   license = stdenv.lib.licenses.bsd3;
 }
